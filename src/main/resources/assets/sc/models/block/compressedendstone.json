@@ -1,0 +1,7 @@
+{
+    "parent": "sc:block/compressedbase",
+    "textures": {
+        "all": "blocks/end_stone",
+        "overlay": "sc:blocks/compressedendstone"
+    }
+}

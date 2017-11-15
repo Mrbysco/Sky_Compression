@@ -1,0 +1,7 @@
+{
+    "parent": "sc:block/compressedbase",
+    "textures": {
+        "all": "blocks/cactus_top",
+        "overlay": "sc:blocks/compressedcactus"
+    }
+}

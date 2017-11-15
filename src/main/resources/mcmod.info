@@ -1,0 +1,16 @@
+[
+{
+  "modid": "sc",
+  "name": "Sky Compression",
+  "description": "Add-on to Sky Resources 2",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["HQBanana", "svennieke", "Mrbysco"],
+  "credits": "HQBanana, Mrbysco, svennieke and Bartz24 (Sky Resources 2)",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

@@ -1,0 +1,7 @@
+{
+    "parent": "sc:block/compressedbase",
+    "textures": {
+        "all": "blocks/gravel",
+        "overlay": "sc:blocks/compressedgravel"
+    }
+}

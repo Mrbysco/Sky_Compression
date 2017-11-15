@@ -1,0 +1,8 @@
+Sky Compression
+- Compressed Rock Grinder -> rock grinder for compressed cobblestone
+- Compressed Water Extractor -> water extractor in 3x3 area with 36000Mb water storage
+
+
+2.0.5 is on 1.12-14.21.1.2406
+
+- compressed cobblestone, gravel, netherrack, endstone

@@ -1,0 +1,7 @@
+{
+    "parent": "sc:block/compressedbase",
+    "textures": {
+        "all": "blocks/clay",
+        "overlay": "sc:blocks/compressedclay"
+    }
+}

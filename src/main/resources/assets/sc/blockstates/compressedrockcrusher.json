@@ -1,0 +1,25 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "cube_all",
+    "textures": {
+       "down": "sc:blocks/compressedsteelmachine",
+         "up": "sc:blocks/compressedsteelmachine",
+      "north": "sc:blocks/compressedrockcrusher",
+      "south": "sc:blocks/compressedsteelmachine",
+       "west": "sc:blocks/compressedsteelmachine",
+       "east": "sc:blocks/compressedsteelmachine",
+   "particle": "sc:blocks/compressedrockcrusher"
+  }
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}],
+    "facing": {
+      "north": {},
+      "south": {"y": 180},
+      "west": {"y": 270},
+      "east": {"y": 90}
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "parent": "sc:block/compressedbase",
+    "textures": {
+        "all": "blocks/log_acacia",
+        "overlay": "sc:blocks/compressedlog"
+    }
+}

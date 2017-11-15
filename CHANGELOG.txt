@@ -1,0 +1,6 @@
+Changed compressed water extractor capacity from 36000mB to 20000mB
+Added compressed rock crusher
+Added compressed oak log
+Fixed some recipes
+Changed mining level of most blocks to require stone tool, instead of iron
+Changed some blocks to require their corresponding tool (i.e. clay requires shovel instead of pickaxe)
