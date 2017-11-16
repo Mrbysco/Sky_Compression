@@ -180,10 +180,8 @@ public class ItemCompressedWaterExtractor extends Item implements IFluidHandler 
 				{
 					
 					GetCompound(stack).setInteger("amount", GetCompound(stack).getInteger("amount") - 1000);
-					tank.getFluid().amount = GetCompound(stack).getInteger("amount");
 					return EnumActionResult.SUCCESS;
 				}
-				
 				return EnumActionResult.FAIL;
 			}
 		}
