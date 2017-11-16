@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import javax.annotation.Nullable;
-import javax.swing.Icon;
 
 import com.bartz24.skyresources.recipe.ProcessRecipe;
 
@@ -14,10 +13,8 @@ import hqbanana.SkyCompression.Reference;
 import hqbanana.SkyCompression.SkyCompression;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSnow;
-import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -31,21 +28,16 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import net.minecraft.item.ItemPickaxe;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidTankProperties;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
-import scala.Console;
 
 public class ItemCompressedWaterExtractor extends Item implements IFluidHandler {
 	public static final int MAX_WATER_MB = 20000;
@@ -125,9 +117,9 @@ public class ItemCompressedWaterExtractor extends Item implements IFluidHandler 
 								1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F));
 						return;
 					}
-					if (blockHitSide == EnumFacing.UP && world.getBlockState(pos.up()).getBlock() == Blocks.WATER
+					if (world.getBlockState(pos.add(blockHitSide.getDirectionVec())) == Blocks.WATER.getDefaultState()
 						&& GetCompound(stack).getInteger("amount") < MAX_WATER_MB) {
-							world.setBlockToAir(pos.up());
+							world.setBlockToAir(pos.add(blockHitSide.getDirectionVec()));
 							int newAmount = 0;
 							if (GetCompound(stack).getInteger("amount") + 1000 <= MAX_WATER_MB) newAmount = GetCompound(stack).getInteger("amount") + 1000;
 							else newAmount = MAX_WATER_MB;
