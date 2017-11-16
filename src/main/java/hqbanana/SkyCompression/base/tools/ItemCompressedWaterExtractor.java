@@ -15,7 +15,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockSnow;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -36,6 +35,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
+import net.minecraftforge.fluids.FluidUtil;
 import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidTankProperties;
 
@@ -161,19 +161,29 @@ public class ItemCompressedWaterExtractor extends Item implements IFluidHandler 
 		
 		//Placement of water
 		if (GetCompound(stack).getInteger("amount") >= 1000 && playerIn.isSneaking()) {
-			if (block == Blocks.SNOW_LAYER && blockState.getValue(BlockSnow.LAYERS).intValue() < 1) side = EnumFacing.UP;
-			else if (!block.isReplaceable(world, pos)) pos = pos.offset(side);
-			if (!playerIn.canPlayerEdit(pos, side, stack) || stack.getCount() == 0) return EnumActionResult.FAIL;
-			else {
-				if (world.mayPlace(Blocks.WATER, pos, false, side, (Entity)null)) {
-					IBlockState blockState2 = Blocks.WATER.getStateForPlacement(world, pos, side, hitX, hitY, hitZ, 0, playerIn);
-					world.setBlockState(pos, blockState2, 3);
+			if (block == Blocks.SNOW_LAYER && blockState.getValue(BlockSnow.LAYERS).intValue() < 1) 
+			{
+				side = EnumFacing.UP;
+			}
+			else if (!block.isReplaceable(world, pos)) 
+			{
+				pos = pos.offset(side);
+			}
+			
+			if (!playerIn.canPlayerEdit(pos, side, stack) || stack.getCount() == 0) 
+			{
+				return EnumActionResult.FAIL;
+			}
+			else 
+			{
+				if (FluidUtil.tryPlaceFluid(playerIn, world, pos, tank, tank.getFluid()))
+				{
+					
 					GetCompound(stack).setInteger("amount", GetCompound(stack).getInteger("amount") - 1000);
 					tank.getFluid().amount = GetCompound(stack).getInteger("amount");
-					world.playSound((EntityPlayer) null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ENTITY_PLAYER_SPLASH, SoundCategory.NEUTRAL,
-							1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F));
 					return EnumActionResult.SUCCESS;
 				}
+				
 				return EnumActionResult.FAIL;
 			}
 		}
