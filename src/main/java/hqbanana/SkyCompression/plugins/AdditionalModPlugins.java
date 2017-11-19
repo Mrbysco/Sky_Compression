@@ -11,7 +11,7 @@ public class AdditionalModPlugins {
 
 	public static void preInit()
 	{
-		addPlugin("crafttweaker", new AdditionalCraftTweakerPlugin());
+		addPlugin("crafttweaker", AdditionalCraftTweakerPlugin.class);
 
 		for (com.bartz24.skyresources.plugin.IModPlugin p : plugins.values())
 		{
@@ -43,9 +43,20 @@ public class AdditionalModPlugins {
 		}
 	}
 	
-	public static void addPlugin(String modID, com.bartz24.skyresources.plugin.IModPlugin plugin)
+	public static void addPlugin(String modID, Class plugin)
 	{
 		if (Loader.isModLoaded(modID))
-			plugins.put(modID, plugin);		
+		{
+			try
+			{
+				plugins.put(modID, (com.bartz24.skyresources.plugin.IModPlugin) plugin.newInstance());
+			} catch (InstantiationException e)
+			{
+				e.printStackTrace();
+			} catch (IllegalAccessException e)
+			{
+				e.printStackTrace();
+			}
+		}
 	}
 }

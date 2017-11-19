@@ -91,10 +91,12 @@ public class ItemCompressedRockGrinder extends ItemPickaxe {
 				}
 			}
 		}
-		if(!world.isRemote)
+		
+		if(worked && !world.isRemote)
 		{
 			world.destroyBlock(pos, !worked);
 		}
+		
 		return worked;
 	}
 	

@@ -99,7 +99,11 @@ public class ItemCompressedKnife extends ItemAxe
 			return true;
 		}
 		
-		world.destroyBlock(pos, true);
+		if (!world.isRemote)
+		{
+			world.destroyBlock(pos, true);
+		}
+		
 		return false;
 	}
 	
