@@ -42,6 +42,7 @@ public class ModCrafting {
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedLogJungle), new Object[] { "OOO", "OOO", "OOO", 'O', new ItemStack(Blocks.LOG, 1, 3)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedLogOak), new Object[] { "OOO", "OOO", "OOO", 'O', new ItemStack(Blocks.LOG, 1, 0)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedLogSpruce), new Object[] { "OOO", "OOO", "OOO", 'O', new ItemStack(Blocks.LOG, 1, 1)});
+		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedPetrifiedWood), new Object[] { "WWW", "WWW", "WWW", 'W', new ItemStack(com.bartz24.skyresources.registry.ModBlocks.petrifiedWood)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedWaterExtractor), new Object[] { "WWW", " WW", 'W', new ItemStack(com.bartz24.skyresources.registry.ModItems.waterExtractor) });
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedStoneRockGrinder), new Object[] { "!!!", "!!!", "!!!",
 						'!', new ItemStack(com.bartz24.skyresources.registry.ModItems.stoneGrinder)});
@@ -79,6 +80,7 @@ public class ModCrafting {
 		CraftingRegistry.addShapelessOreRecipe(new ItemStack(Blocks.LOG, 9, 3), new Object[] { new ItemStack(ModBlocks.compressedLogJungle)});
 		CraftingRegistry.addShapelessOreRecipe(new ItemStack(Blocks.LOG, 9, 0), new Object[] { new ItemStack(ModBlocks.compressedLogOak)});
 		CraftingRegistry.addShapelessOreRecipe(new ItemStack(Blocks.LOG, 9, 1), new Object[] { new ItemStack(ModBlocks.compressedLogSpruce)});
+		CraftingRegistry.addShapelessOreRecipe(new ItemStack(com.bartz24.skyresources.registry.ModBlocks.petrifiedWood, 9), new Object[] { new ItemStack(ModBlocks.compressedPetrifiedWood)});
 	}
 	
 	private static void AddAdditionalProcessRecipes() {
@@ -135,7 +137,38 @@ public class ModCrafting {
 				new ItemStack(Blocks.CACTUS, 1, OreDictionary.WILDCARD_VALUE));
 		AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes.addRecipe(new ItemStack(Items.MELON, 9), 0,
 				new ItemStack(Blocks.MELON_BLOCK, 1, OreDictionary.WILDCARD_VALUE));
+		//Adding the new knife recipes
+		AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes.addRecipe(new ItemStack(Blocks.PLANKS, 54, 4), 0,
+				new ItemStack(ModBlocks.compressedLogAcacia, 1, OreDictionary.WILDCARD_VALUE));
+		AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes.addRecipe(new ItemStack(Blocks.PLANKS, 54, 5), 0,
+				new ItemStack(ModBlocks.compressedLogBigOak, 1, OreDictionary.WILDCARD_VALUE));
+		AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes.addRecipe(new ItemStack(Blocks.PLANKS, 54, 2), 0,
+				new ItemStack(ModBlocks.compressedLogBirch, 1, OreDictionary.WILDCARD_VALUE));
+		AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes.addRecipe(new ItemStack(Blocks.PLANKS, 54, 3), 0,
+				new ItemStack(ModBlocks.compressedLogJungle, 1, OreDictionary.WILDCARD_VALUE));
+		AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes.addRecipe(new ItemStack(Blocks.PLANKS, 54, 0), 0,
+				new ItemStack(ModBlocks.compressedLogOak, 1, OreDictionary.WILDCARD_VALUE));
+		AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes.addRecipe(new ItemStack(Blocks.PLANKS, 54, 1), 0,
+				new ItemStack(ModBlocks.compressedLogSpruce, 1, OreDictionary.WILDCARD_VALUE));
+		AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes.addRecipe(new ItemStack(com.bartz24.skyresources.registry.ModBlocks.petrifiedPlanks, 54), 0,
+				new ItemStack(ModBlocks.compressedPetrifiedWood, 1, OreDictionary.WILDCARD_VALUE));
+		
+		AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes.addRecipe(new ItemStack(Items.STICK, 6), 0,
+				new ItemStack(Blocks.PLANKS, 1, 4));
+		AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes.addRecipe(new ItemStack(Items.STICK, 6), 0,
+				new ItemStack(Blocks.PLANKS, 1, 5));
+		AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes.addRecipe(new ItemStack(Items.STICK, 6), 0,
+				new ItemStack(Blocks.PLANKS, 1, 2));
+		AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes.addRecipe(new ItemStack(Items.STICK, 6), 0,
+				new ItemStack(Blocks.PLANKS, 1, 3));
+		AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes.addRecipe(new ItemStack(Items.STICK, 6), 0,
+				new ItemStack(Blocks.PLANKS, 1, 0));
+		AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes.addRecipe(new ItemStack(Items.STICK, 6), 0,
+				new ItemStack(Blocks.PLANKS, 1, 1));
+		AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes.addRecipe(new ItemStack(Items.STICK, 6), 0,
+				new ItemStack(com.bartz24.skyresources.registry.ModBlocks.petrifiedPlanks, 1));
 		//
+		
 		
 		//Manually adding the Gem Recipes to the rock grinder
 		for (int i = 0; i < com.bartz24.skyresources.registry.ModItems.gemList.size(); i++) {

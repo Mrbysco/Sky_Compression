@@ -27,6 +27,7 @@ public class ModBlocks {
 	public static Block compressedDryCactus, compressedCactus, compressedDirt, compressedClay, compressedSand;
 	public static Block compressedLogAcacia, compressedLogBigOak, compressedLogBirch, compressedLogJungle, compressedLogOak, compressedLogSpruce;
 	public static Block compressedRockCrusher;
+	public static Block compressedPetrifiedWood;
 	
 	public static void Initialize() {
 		compressedStone = RegisterBlock(new BlockCompressedStone("compressedstone", 1.5f, 4.0f, Material.ROCK, 1));
@@ -48,6 +49,7 @@ public class ModBlocks {
 		compressedLogOak = RegisterBlock(new BlockCompressedLog("compressedlogoak", 1.8f, 4.0f, Material.WOOD, 1));
 		compressedLogSpruce = RegisterBlock(new BlockCompressedLog("compressedlogspruce", 1.8f, 4.0f, Material.WOOD, 1));
 
+		compressedPetrifiedWood = RegisterBlock(new BlockCompressedLog("compressedpetrifiedwood", 1.8f, 4.0f, Material.WOOD, 1));
 	}
 	
 	public static Block RegisterBlock(Block block) {
@@ -78,6 +80,8 @@ public class ModBlocks {
 		RegisterBlockRenderer(compressedLogJungle);
 		RegisterBlockRenderer(compressedLogOak);
 		RegisterBlockRenderer(compressedLogSpruce);
+		
+		RegisterBlockRenderer(compressedPetrifiedWood);
 	}
 	
 	private static void RegisterBlockRenderer(Block block, int meta, ResourceLocation name) {

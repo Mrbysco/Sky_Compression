@@ -1,0 +1,7 @@
+{
+    "parent": "sc:block/compressedbase",
+    "textures": {
+        "all": "skyresources:blocks/petrifiedwood",
+        "overlay": "sc:blocks/compressedlog"
+    }
+}
