@@ -1,7 +1,10 @@
 {
-    "variants": {
-        "normal": [
-            { "model": "sc:compressedclay" },
-        ]
-    }
+	"forge_marker": 1,
+	"defaults": {
+		"model": "sc:compressedclay"
+	},
+	"variants": {
+		"normal": [{}],
+		"inventory": [{}]
+	}
 }

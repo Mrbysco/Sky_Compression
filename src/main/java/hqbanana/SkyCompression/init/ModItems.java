@@ -1,5 +1,6 @@
 package hqbanana.SkyCompression.init;
 
+import hqbanana.SkyCompression.base.items.CustomItem;
 import hqbanana.SkyCompression.base.tools.ItemCompressedKnife;
 import hqbanana.SkyCompression.base.tools.ItemCompressedRockGrinder;
 import hqbanana.SkyCompression.base.tools.ItemCompressedWaterExtractor;
@@ -16,6 +17,7 @@ public class ModItems {
 	public static Item compressedWaterExtractor;
 	public static Item compressedStoneRockGrinder, compressedIronRockGrinder, compressedDiamondRockGrinder;
 	public static Item compressedCactusKnife, compressedStoneKnife, compressedIronKnife, compressedDiamondKnife;
+	public static Item compressedStick;
 	//public static ToolMaterial cheeseSwordMaterial = EnumHelper.addToolMaterial("TutorialTool", 3, 2159, 11.0F, 3.5F, 16);
 	
 	public static ToolMaterial materialCactusNeedle = EnumHelper
@@ -30,6 +32,7 @@ public class ModItems {
 		compressedStoneKnife = RegisterItem(new ItemCompressedKnife(ToolMaterial.STONE, "compressedstoneknife"));
 		compressedIronKnife = RegisterItem(new ItemCompressedKnife(ToolMaterial.IRON, "compressedironknife"));
 		compressedDiamondKnife = RegisterItem(new ItemCompressedKnife(ToolMaterial.DIAMOND, "compresseddiamondknife"));
+		compressedStick = RegisterItem(new CustomItem("compressedstick"));
 	}
 	
 	public static Item RegisterItem(Item item) {
@@ -46,6 +49,7 @@ public class ModItems {
 		RegisterItemRenderer(compressedStoneKnife);
 		RegisterItemRenderer(compressedIronKnife);
 		RegisterItemRenderer(compressedDiamondKnife);
+		RegisterItemRenderer(compressedStick);
 	}
 	
 	private static void RegisterItemRenderer(Item item, int meta, ResourceLocation name) {

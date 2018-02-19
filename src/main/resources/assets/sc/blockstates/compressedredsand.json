@@ -1,7 +1,8 @@
 {
 	"forge_marker": 1,
 	"defaults": {
-		"model": "sc:compressedgravel"
+		"model": "sc:compressedsand",
+		"textures": { "all": "blocks/red_sand" }
 	},
 	"variants": {
 		"normal": [{}],

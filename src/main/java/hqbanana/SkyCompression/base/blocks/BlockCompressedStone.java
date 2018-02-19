@@ -1,6 +1,5 @@
 package hqbanana.SkyCompression.base.blocks;
 
-import hqbanana.SkyCompression.Reference;
 import net.minecraft.block.material.Material;
 
 public class BlockCompressedStone extends CustomBlock{

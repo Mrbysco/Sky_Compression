@@ -1,20 +1,10 @@
 package hqbanana.SkyCompression.base.blocks;
 
-import com.bartz24.skyresources.RandomHelper;
-import com.bartz24.skyresources.alchemy.item.AlchemyItemComponent;
-
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
 
 public class BlockCompressedDryCactus extends CustomBlock {
 	private static final int COMPRESSION_MULTIPLIER = 9;

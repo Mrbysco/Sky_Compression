@@ -8,6 +8,7 @@ import com.bartz24.skyresources.config.ConfigOptions;
 import com.google.common.base.Strings;
 
 import hqbanana.SkyCompression.AdditionalProcessRecipesManager;
+import hqbanana.SkyCompression.SkyCompression;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -36,6 +37,7 @@ public class ModCrafting {
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedDirt), new Object[] { "DDD", "DDD", "DDD", 'D', new ItemStack(Blocks.DIRT) });
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedClay), new Object[] { "CCC", "CCC", "CCC", 'C', new ItemStack(Blocks.CLAY) });
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedSand), new Object[] { "SSS", "SSS", "SSS", 'S', new ItemStack(Blocks.SAND) });
+		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedRedSand), new Object[] { "SSS", "SSS", "SSS", 'S', new ItemStack(Blocks.SAND, 1, 1) });
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedLogAcacia), new Object[] { "OOO", "OOO", "OOO", 'O', new ItemStack(Blocks.LOG2, 1, 0)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedLogBigOak), new Object[] { "OOO", "OOO", "OOO", 'O', new ItemStack(Blocks.LOG2, 1, 1)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedLogBirch), new Object[] { "OOO", "OOO", "OOO", 'O', new ItemStack(Blocks.LOG, 1, 2)});
@@ -44,6 +46,7 @@ public class ModCrafting {
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedLogSpruce), new Object[] { "OOO", "OOO", "OOO", 'O', new ItemStack(Blocks.LOG, 1, 1)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedPetrifiedWood), new Object[] { "WWW", "WWW", "WWW", 'W', new ItemStack(com.bartz24.skyresources.registry.ModBlocks.petrifiedWood)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedWaterExtractor), new Object[] { "WWW", " WW", 'W', new ItemStack(com.bartz24.skyresources.registry.ModItems.waterExtractor) });
+		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedStick), new Object[] { "SSS", "SSS", "SSS", 'S', new ItemStack(Items.STICK)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedStoneRockGrinder), new Object[] { "!!!", "!!!", "!!!",
 						'!', new ItemStack(com.bartz24.skyresources.registry.ModItems.stoneGrinder)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedIronRockGrinder), new Object[] { "@@@", "@@@", "@@@",
@@ -61,6 +64,20 @@ public class ModCrafting {
 					'#', new ItemStack(com.bartz24.skyresources.registry.ModItems.ironKnife)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedDiamondKnife), new Object[] { "###", "###", "###",
 				'#', new ItemStack(com.bartz24.skyresources.registry.ModItems.diamondKnife)});
+		
+		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedStoneRockGrinder), new Object[] { "O  ", " O ", "  S", 'O', "compressed1xCobblestone" ,'S', new ItemStack(ModItems.compressedStick)});
+		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedIronRockGrinder), new Object[] { "O  ", " O ", "  S", 'O', new ItemStack(Blocks.IRON_BLOCK) ,'S', new ItemStack(ModItems.compressedStick)});
+		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedDiamondRockGrinder), new Object[] { "O  ", " O ", "  S", 'O', new ItemStack(Blocks.DIAMOND_BLOCK) ,'S', new ItemStack(ModItems.compressedStick)});
+
+		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedStoneKnife), new Object[] { "O  ", "OS ", " OS", 'O', "compressed1xCobblestone" ,'S', new ItemStack(ModItems.compressedStick)});
+		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedIronKnife), new Object[] { "O  ", "OS ", " OS", 'O', new ItemStack(Blocks.IRON_BLOCK) ,'S', new ItemStack(ModItems.compressedStick)});
+		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedDiamondKnife), new Object[] { "O  ", "OS ", " OS", 'O', new ItemStack(Blocks.DIAMOND_BLOCK) ,'S', new ItemStack(ModItems.compressedStick)});
+
+		if (SkyCompression.isSnadInstalled)
+		{
+			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedSnad), new Object[] { "S S", " B ", "S S", 'S', new ItemStack(ModBlocks.compressedSand), 'B', new ItemStack(Blocks.BONE_BLOCK) });
+			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedRedSnad), new Object[] { "S S", " B ", "S S", 'S', new ItemStack(ModBlocks.compressedRedSand), 'B', new ItemStack(Blocks.BONE_BLOCK) });
+		}
 	}
 	
 	private static void AddShapelessOreRecipes() {

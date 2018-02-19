@@ -1,7 +1,10 @@
 {
-    "variants": {
-        "normal": [
-            { "model": "sc:compressedcobblestone" },
-        ]
-    }
+	"forge_marker": 1,
+	"defaults": {
+		"model": "sc:compressedcobblestone"
+	},
+	"variants": {
+		"normal": [{}],
+		"inventory": [{}]
+	}
 }

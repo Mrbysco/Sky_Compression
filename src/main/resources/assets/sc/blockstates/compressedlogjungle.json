@@ -1,7 +1,10 @@
 {
-    "variants": {
-        "normal": [
-            { "model": "sc:compressedlogjungle" },
-        ]
-    }
+	"forge_marker": 1,
+	"defaults": {
+		"model": "sc:compressedlogjungle"
+	},
+	"variants": {
+		"normal": [{}],
+		"inventory": [{}]
+	}
 }

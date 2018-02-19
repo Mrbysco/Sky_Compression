@@ -12,6 +12,9 @@ public class AdditionalConfigOptions
 {
 	@Config.Comment("Config Settings for Compressed Machines")
 	public static MachineSettings machineSettings = new MachineSettings();
+	
+	@Config.Comment("Config Settings for Mod Support")
+	public static ModSupport modsupport = new ModSupport();
 
 	public static class MachineSettings
 	{
@@ -19,6 +22,12 @@ public class AdditionalConfigOptions
 		public int compressedRockCrusherSpeed = 7;
 		@Config.Comment("Compressed Rock Crusher RF Rate")
 		public int compressedRockCrusherPowerUsage = 1000;
+	}
+	
+	public static class ModSupport
+	{
+		@Config.Comment("Compressed Snad Speed Increase (For when Just Another Snad is installed) [default: 18]")
+		public int snadSpeedIncrease = 18;
 	}
 
 	@Mod.EventBusSubscriber(modid = Reference.MOD_ID)

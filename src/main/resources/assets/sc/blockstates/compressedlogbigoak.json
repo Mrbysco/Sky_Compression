@@ -1,7 +1,10 @@
 {
-    "variants": {
-        "normal": [
-            { "model": "sc:compressedlogbigoak" },
-        ]
-    }
+	"forge_marker": 1,
+	"defaults": {
+		"model": "sc:compressedlogbigoak"
+	},
+	"variants": {
+		"normal": [{}],
+		"inventory": [{}]
+	}
 }

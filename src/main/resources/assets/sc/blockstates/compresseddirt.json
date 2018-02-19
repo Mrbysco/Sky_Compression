@@ -1,7 +1,10 @@
 {
-    "variants": {
-        "normal": [
-            { "model": "sc:compresseddirt" },
-        ]
-    }
+	"forge_marker": 1,
+	"defaults": {
+		"model": "sc:compresseddirt"
+	},
+	"variants": {
+		"normal": [{}],
+		"inventory": [{}]
+	}
 }

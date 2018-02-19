@@ -9,7 +9,6 @@ import hqbanana.SkyCompression.SkyCompression;
 import hqbanana.SkyCompression.Handlers.ModGuiHandler;
 import hqbanana.SkyCompression.base.tile.TileCompressedRockCrusher;
 import hqbanana.SkyCompression.init.ModBlocks;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;

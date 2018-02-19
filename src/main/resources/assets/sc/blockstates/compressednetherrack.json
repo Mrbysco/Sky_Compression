@@ -1,7 +1,10 @@
 {
-    "variants": {
-        "normal": [
-            { "model": "sc:compressednetherrack" },
-        ]
-    }
+	"forge_marker": 1,
+	"defaults": {
+		"model": "sc:compressednetherrack"
+	},
+	"variants": {
+		"normal": [{}],
+		"inventory": [{}]
+	}
 }

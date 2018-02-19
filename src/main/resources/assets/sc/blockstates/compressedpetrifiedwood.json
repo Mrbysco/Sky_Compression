@@ -1,7 +1,10 @@
 {
-    "variants": {
-        "normal": [
-            { "model": "sc:compressedpetrifiedwood" },
-        ]
-    }
+	"forge_marker": 1,
+	"defaults": {
+		"model": "sc:compressedpetrifiedwood"
+	},
+	"variants": {
+		"normal": [{}],
+		"inventory": [{}]
+	}
 }

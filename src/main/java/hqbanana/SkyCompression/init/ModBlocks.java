@@ -11,6 +11,8 @@ import hqbanana.SkyCompression.base.blocks.BlockCompressedGravel;
 import hqbanana.SkyCompression.base.blocks.BlockCompressedLog;
 import hqbanana.SkyCompression.base.blocks.BlockCompressedNetherrack;
 import hqbanana.SkyCompression.base.blocks.BlockCompressedRockCrusher;
+import hqbanana.SkyCompression.base.blocks.BlockCompressedSand;
+import hqbanana.SkyCompression.base.blocks.BlockCompressedSnad;
 import hqbanana.SkyCompression.base.blocks.BlockCompressedStone;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -24,10 +26,11 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class ModBlocks {
 	public static Block compressedStone, compressedCobbleStone, compressedGravel, compressedNetherrack, compressedEndStone;
-	public static Block compressedDryCactus, compressedCactus, compressedDirt, compressedClay, compressedSand;
+	public static Block compressedDryCactus, compressedCactus, compressedDirt, compressedClay, compressedSand, compressedRedSand;
 	public static Block compressedLogAcacia, compressedLogBigOak, compressedLogBirch, compressedLogJungle, compressedLogOak, compressedLogSpruce;
 	public static Block compressedRockCrusher;
 	public static Block compressedPetrifiedWood;
+	public static Block compressedSnad, compressedRedSnad;
 	
 	public static void Initialize() {
 		compressedStone = RegisterBlock(new BlockCompressedStone("compressedstone", 1.5f, 4.0f, Material.ROCK, 1));
@@ -39,7 +42,8 @@ public class ModBlocks {
 		compressedCactus = RegisterBlock(new BlockCompressedCactus("compressedcactus", 0.4f, 4.0f, 1));
 		compressedDirt = RegisterBlock(new BlockCompressedDirt("compresseddirt", 0.5f, 4.0f, Material.ROCK, 1));
 		compressedClay = RegisterBlock(new BlockCompressedClay("compressedclay", 0.6f, 4.0f, Material.CLAY, 1));
-		compressedSand = RegisterBlock(new BlockCompressedClay("compressedsand", 0.5f, 4.0f, Material.ROCK, 1));
+		compressedSand = RegisterBlock(new BlockCompressedSand("compressedsand", 0.5f, 4.0f, Material.ROCK, 1));
+		compressedRedSand = RegisterBlock(new BlockCompressedSand("compressedredsand", 0.5f, 4.0f, Material.ROCK, 1));
 		compressedRockCrusher = RegisterBlock(new BlockCompressedRockCrusher("compressedrockcrusher", 1.5f, 4.0f, Material.ROCK, 1));
 		
 		compressedLogAcacia = RegisterBlock(new BlockCompressedLog("compressedlogacacia", 1.8f, 4.0f, Material.WOOD, 1));
@@ -50,6 +54,12 @@ public class ModBlocks {
 		compressedLogSpruce = RegisterBlock(new BlockCompressedLog("compressedlogspruce", 1.8f, 4.0f, Material.WOOD, 1));
 
 		compressedPetrifiedWood = RegisterBlock(new BlockCompressedLog("compressedpetrifiedwood", 1.8f, 4.0f, Material.WOOD, 1));
+		
+		if (SkyCompression.isSnadInstalled)
+		{
+			compressedSnad = RegisterBlock(new BlockCompressedSnad("compressedsnad", 0.5f, 4.0f, Material.ROCK, 1));
+			compressedRedSnad = RegisterBlock(new BlockCompressedSnad("compressedredsnad", 0.5f, 4.0f, Material.ROCK, 1));
+		}
 	}
 	
 	public static Block RegisterBlock(Block block) {
@@ -72,6 +82,7 @@ public class ModBlocks {
 		RegisterBlockRenderer(compressedDirt);
 		RegisterBlockRenderer(compressedClay);
 		RegisterBlockRenderer(compressedSand);
+		RegisterBlockRenderer(compressedRedSand);
 		RegisterBlockRenderer(compressedRockCrusher);
 		
 		RegisterBlockRenderer(compressedLogAcacia);
@@ -82,6 +93,12 @@ public class ModBlocks {
 		RegisterBlockRenderer(compressedLogSpruce);
 		
 		RegisterBlockRenderer(compressedPetrifiedWood);
+		
+		if (SkyCompression.isSnadInstalled)
+		{
+			RegisterBlockRenderer(compressedSnad);
+			RegisterBlockRenderer(compressedRedSnad);
+		}
 	}
 	
 	private static void RegisterBlockRenderer(Block block, int meta, ResourceLocation name) {

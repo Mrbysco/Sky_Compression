@@ -20,6 +20,7 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.ForgeHooks;
 
 public class BlockCompressedCactus extends BlockCactus{
 	private static final int COMPRESSION_MULTIPLIER = 9;
@@ -36,7 +37,7 @@ public class BlockCompressedCactus extends BlockCactus{
 	
 	@Override
 	public int tickRate(World worldIn) {
-		return 1;
+		return 2;
 	}
 	
 	public boolean isFullCube(IBlockState state) {
@@ -93,8 +94,13 @@ public class BlockCompressedCactus extends BlockCactus{
                 return false;
             }
         }
-        	
-        return !worldIn.getBlockState(pos.up()).getMaterial().isLiquid() && (state.getBlock().getUnlocalizedName().contains("compressedsand") || state.getBlock() == this);
+        
+        boolean flag = state.getBlock().getUnlocalizedName().contains("compressedsand");
+        boolean flag2 = state.getBlock().getUnlocalizedName().contains("compressedredsand");
+        boolean flag3 = state.getBlock().getUnlocalizedName().contains("compressedsnad");
+        boolean flag4 = state.getBlock().getUnlocalizedName().contains("compressedredsnad");
+        
+        return !worldIn.getBlockState(pos.up()).getMaterial().isLiquid() && (flag || flag2 || flag3 || flag4 || state.getBlock() == this);
     }
 	
 	@Override	
@@ -115,7 +121,7 @@ public class BlockCompressedCactus extends BlockCactus{
             {
                 int j = ((Integer)state.getValue(AGE)).intValue();
 
-                if(net.minecraftforge.common.ForgeHooks.onCropsGrowPre(worldIn, blockpos, state, true))
+                if(ForgeHooks.onCropsGrowPre(worldIn, blockpos, state, true))
                 {
 	                if (j == 15)
 	                {
@@ -131,7 +137,7 @@ public class BlockCompressedCactus extends BlockCactus{
 	                		worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(j + 1)), 4);
 	                	}
 	                }
-	                net.minecraftforge.common.ForgeHooks.onCropsGrowPost(worldIn, pos, state, worldIn.getBlockState(pos));
+	                ForgeHooks.onCropsGrowPost(worldIn, pos, state, worldIn.getBlockState(pos));
                 }
             }
         }

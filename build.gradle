@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "1.2"
+version = "1.2.1"
 group = "com.HQBanana.sc" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Sky Compression"
 
@@ -48,6 +48,7 @@ dependencies {
     //compile "some.group:artifact:version"
       compile files("lib/skyresources-2.2.1.jar")
 	  compile files("lib/jei_1.12.2-4.8.0.114.jar")
+	  compile files("lib/JustAnotherSnad-1.12-1.0.0.0.jar")
     // real examples
     //compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
     //compile 'com.googlecode.efficient-java-matrix-library:ejml:0.24' // adds ejml to the dev env
