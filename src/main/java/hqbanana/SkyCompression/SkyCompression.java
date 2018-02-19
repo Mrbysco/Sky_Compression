@@ -16,7 +16,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, dependencies = "required-after:skyresources;after:crafttweaker;after:justanothersnad")
+@Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, dependencies = "required-after:skyresources;after:justanothersnad")
 public class SkyCompression {
 	public static final CreativeTabs SKY_COMPRESSION_TAB = new SkyCompressionTab("skycompressiontab");
 	

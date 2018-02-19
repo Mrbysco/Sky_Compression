@@ -26,8 +26,8 @@ public class AdditionalConfigOptions
 	
 	public static class ModSupport
 	{
-		@Config.Comment("Compressed Snad Speed Increase (For when Just Another Snad is installed) [default: 18]")
-		public int snadSpeedIncrease = 18;
+		@Config.Comment("Compressed Snad Speed Increase (For when Just Another Snad is installed) [default: 2]")
+		public int snadSpeedIncrease = 2;
 	}
 
 	@Mod.EventBusSubscriber(modid = Reference.MOD_ID)
