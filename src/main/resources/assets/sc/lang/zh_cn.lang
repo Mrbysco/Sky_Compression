@@ -1,0 +1,54 @@
+item.sc.compressedwaterextractor.name=压缩抽水器
+item.sc.compressedrockgrinder.name=压缩石制碎石杵
+item.sc.compressedirongrinder.name=压缩铁制碎石杵
+item.sc.compresseddiamondgrinder.name=压缩钻石碎石杵
+item.sc.compressedcactusknife.name=压缩仙人掌切割刀
+item.sc.compressedstoneknife.name=压缩石制切割刀
+item.sc.compressedironknife.name=压缩铁制切割刀
+item.sc.compresseddiamondknife.name=压缩钻石切割刀
+item.sc.compressedstick.name=压缩木棍
+
+tile.sc.compressedstone.name=压缩石头
+tile.sc.compressedcobblestone.name=压缩圆石
+tile.sc.compressedgravel.name=压缩沙砾
+tile.sc.compressednetherrack.name=压缩地狱岩
+tile.sc.compressedendstone.name=压缩末地石
+tile.sc.compresseddrycactus.name=压缩脱水仙人掌
+tile.sc.compressedcactus.name=压缩仙人掌
+tile.sc.compresseddirt.name=压缩泥土
+tile.sc.compressedclay.name=压缩粘土
+tile.sc.compressedsand.name=压缩沙子
+tile.sc.compressedredsand.name=压缩红沙
+tile.sc.compressedrockcrusher.name=压缩碎石机
+tile.sc.compressedlogacacia.name=压缩金合欢木
+tile.sc.compressedlogbigoak.name=压缩深色橡木
+tile.sc.compressedlogbirch.name=压缩白桦木
+tile.sc.compressedlogjungle.name=压缩从林木
+tile.sc.compressedlogoak.name=压缩橡木
+tile.sc.compressedlogspruce.name=压缩云杉木
+tile.sc.compressedpetrifiedwood.name=压缩石化木
+
+tile.sc.compressedsnad.name=压缩Snad
+tile.sc.compressedredsnad.name=压缩Red Snad
+
+container.sc.compressedRockCrusher=压缩碎石机
+
+jei.sc.recipe.compressedRockGrinder=压缩碎石杵
+jei.sc.recipe.compressedWaterExtractor=压缩抽水器
+jei.sc.recipe.compressedKnife=压缩切割刀
+
+itemGroup.skycompressiontab=Sky Compression
+
+guide.skyresources.compression=Compression
+
+guide.skyresources.compression.compression.title=Compression - 压缩万物！
+guide.skyresources.compression.compression.text=你能够将诸如石头之类的方块压缩成像 <recipe,,sc:compressedstone:0> 一样更致密的方块。 \n \n 这些方块比起普通的方块能够产出更多污浊的宝石和粉碎的石头，但只能使用 <recipe,,sc:compressedrockgrinder:0> 来采集。
+
+guide.skyresources.compression.compressedwaterextracting.title=Compression - 抽水
+guide.skyresources.compression.compressedwaterextracting.text=你可以使用 <recipe,,sc:compressedwaterextractor:0> 来一次从 27 个方块中抽水（包括水源方块）！压缩抽水器能够抽取以你所指向的方块为中心 3x3x3 范围内的方块。 \n \n 需要注意的是，压缩抽水器一次只能从一个源头中抽水。同时抽取仙人掌和树叶是无效的。 \n \n 你也可以用它向 <recipe,,sc:compresseddirt:0> 内注入 1800mB 的水就可以将其转化为 <recipe,,sc:compressedclay:0> 。
+
+guide.skyresources.compression.compressedCactus.title=Compression - 仙人掌刺
+guide.skyresources.compression.compressedCactus.text=按住 Shift 键右击 <recipe,,sc:compressedcactus:0> 可以获得 9 个 <recipe,,skyresources:alchemyitemcomponent:0> 。这也会对你造成严重的伤害，所以请谨慎对待这个强有力的植物。
+
+guide.skyresources.compression.compressedAutomation.title=Compression - 自动化
+guide.skyresources.compression.compressedAutomation.text=与普通的方块一样，压缩方块也可以被自动化地粉碎和清洗。只需要使用 <recipe,,sc:compressedrockcrusher:0> 和 |WIP 压缩洗矿机| 即可完成。这些机器与普通的机器工作方式相同，但是需要更多的能量，同时工作速度也会更快。
