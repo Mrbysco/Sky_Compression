@@ -72,11 +72,13 @@ public class ModCrafting {
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedStoneKnife), new Object[] { "O  ", "OS ", " OS", 'O', "compressed1xCobblestone" ,'S', new ItemStack(ModItems.compressedStick)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedIronKnife), new Object[] { "O  ", "OS ", " OS", 'O', new ItemStack(Blocks.IRON_BLOCK) ,'S', new ItemStack(ModItems.compressedStick)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedDiamondKnife), new Object[] { "O  ", "OS ", " OS", 'O', new ItemStack(Blocks.DIAMOND_BLOCK) ,'S', new ItemStack(ModItems.compressedStick)});
-
+		
 		if (SkyCompression.isSnadInstalled)
 		{
-			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedSnad), new Object[] { "S S", " B ", "S S", 'S', new ItemStack(ModBlocks.compressedSand), 'B', new ItemStack(Blocks.BONE_BLOCK) });
-			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedRedSnad), new Object[] { "S S", " B ", "S S", 'S', new ItemStack(ModBlocks.compressedRedSand), 'B', new ItemStack(Blocks.BONE_BLOCK) });
+			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedSnad), new Object[] { "S S", " B ", "S S", 'S', "compressed1xSand", 'B', new ItemStack(Blocks.BONE_BLOCK) });			
+			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedSnad), new Object[] { "SSS", "SSS", "SSS", 'S', new ItemStack(net.darkmorford.jas.init.ModBlocks.snad) });			
+			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedRedSnad), new Object[] { "S S", " B ", "S S", 'S', new ItemStack(ModBlocks.compressedRedSand), 'B', new ItemStack(Blocks.BONE_BLOCK) });			
+			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedRedSnad), new Object[] { "SSS", "SSS", "SSS", 'S', new ItemStack(net.darkmorford.jas.init.ModBlocks.snad, 1, 1) });			
 		}
 	}
 	
@@ -98,6 +100,14 @@ public class ModCrafting {
 		CraftingRegistry.addShapelessOreRecipe(new ItemStack(Blocks.LOG, 9, 0), new Object[] { new ItemStack(ModBlocks.compressedLogOak)});
 		CraftingRegistry.addShapelessOreRecipe(new ItemStack(Blocks.LOG, 9, 1), new Object[] { new ItemStack(ModBlocks.compressedLogSpruce)});
 		CraftingRegistry.addShapelessOreRecipe(new ItemStack(com.bartz24.skyresources.registry.ModBlocks.petrifiedWood, 9), new Object[] { new ItemStack(ModBlocks.compressedPetrifiedWood)});
+		CraftingRegistry.addShapelessOreRecipe(new ItemStack(Blocks.SAND, 9, 1), new Object[] { new ItemStack(ModBlocks.compressedRedSand)});
+		CraftingRegistry.addShapelessOreRecipe(new ItemStack(Items.STICK, 9), new Object[] { new ItemStack(ModItems.compressedStick)});
+		
+		if (SkyCompression.isSnadInstalled)
+		{
+			CraftingRegistry.addShapelessOreRecipe(new ItemStack(net.darkmorford.jas.init.ModBlocks.snad, 9), new Object[] { new ItemStack(ModBlocks.compressedSnad)});
+			CraftingRegistry.addShapelessOreRecipe(new ItemStack(net.darkmorford.jas.init.ModBlocks.snad, 9, 1), new Object[] { new ItemStack(ModBlocks.compressedRedSnad)});
+		}
 	}
 	
 	private static void AddAdditionalProcessRecipes() {

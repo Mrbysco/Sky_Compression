@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "1.2.1"
+version = "1.2.2"
 group = "com.HQBanana.sc" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Sky Compression"
 
@@ -22,13 +22,19 @@ compileJava {
 
 repositories {
 	maven {
+		url = "http://dvs1.progwml6.com/files/maven"
+	}
+	maven {
+		url = "modmaven.k-4u.nl"
+	}
+	maven {
 		name "Jared"
 		url "http://maven.blamejared.com/"
 	}
 }
 
 minecraft {
-    version = "1.12.2-14.23.1.2604"
+    version = "1.12.2-14.23.2.2611"
     runDir = "run"
     
     // the mappings can be changed at any time, and must be in the following format.
@@ -46,9 +52,13 @@ dependencies {
     // or you may define them like so..
     //compile "some.group:artifact:version:classifier"
     //compile "some.group:artifact:version"
-      compile files("lib/skyresources-2.2.1.jar")
-	  compile files("lib/jei_1.12.2-4.8.0.114.jar")
-	  compile files("lib/JustAnotherSnad-1.12-1.0.0.0.jar")
+		compile files("lib/skyresources-2.2.1.jar")
+		compile files("lib/JustAnotherSnad-1.12-1.0.0.0.jar")
+		
+		deobfCompile "mezz.jei:jei_1.12.2:4.8.5.+"
+		deobfCompile "mezz.jei:jei_1.12.2:4.8.5.+:api"
+		runtime "mezz.jei:jei_1.12.2:4.8.5.+"
+	
     // real examples
     //compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
     //compile 'com.googlecode.efficient-java-matrix-library:ejml:0.24' // adds ejml to the dev env
