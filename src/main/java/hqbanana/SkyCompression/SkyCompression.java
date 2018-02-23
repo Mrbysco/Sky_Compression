@@ -29,6 +29,7 @@ public class SkyCompression {
 	public static CommonProxy proxy;
 	
 	public static boolean isSnadInstalled = false;
+	
 	@EventHandler
 	public static void PreInit(FMLPreInitializationEvent event) {
 		isSnadInstalled = Loader.isModLoaded("justanothersnad");

@@ -11,6 +11,7 @@ import hqbanana.SkyCompression.AdditionalProcessRecipesManager;
 import hqbanana.SkyCompression.SkyCompression;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
@@ -76,9 +77,9 @@ public class ModCrafting {
 		if (SkyCompression.isSnadInstalled)
 		{
 			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedSnad), new Object[] { "S S", " B ", "S S", 'S', "compressed1xSand", 'B', new ItemStack(Blocks.BONE_BLOCK) });			
-			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedSnad), new Object[] { "SSS", "SSS", "SSS", 'S', new ItemStack(net.darkmorford.jas.init.ModBlocks.snad) });			
+			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedSnad), new Object[] { "SSS", "SSS", "SSS", 'S', new ItemStack(Item.getByNameOrId("justanothersnad:snad")) });			
 			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedRedSnad), new Object[] { "S S", " B ", "S S", 'S', new ItemStack(ModBlocks.compressedRedSand), 'B', new ItemStack(Blocks.BONE_BLOCK) });			
-			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedRedSnad), new Object[] { "SSS", "SSS", "SSS", 'S', new ItemStack(net.darkmorford.jas.init.ModBlocks.snad, 1, 1) });			
+			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedRedSnad), new Object[] { "SSS", "SSS", "SSS", 'S', new ItemStack(Item.getByNameOrId("justanothersnad:snad"), 1, 1) });			
 		}
 	}
 	
@@ -105,8 +106,8 @@ public class ModCrafting {
 		
 		if (SkyCompression.isSnadInstalled)
 		{
-			CraftingRegistry.addShapelessOreRecipe(new ItemStack(net.darkmorford.jas.init.ModBlocks.snad, 9), new Object[] { new ItemStack(ModBlocks.compressedSnad)});
-			CraftingRegistry.addShapelessOreRecipe(new ItemStack(net.darkmorford.jas.init.ModBlocks.snad, 9, 1), new Object[] { new ItemStack(ModBlocks.compressedRedSnad)});
+			CraftingRegistry.addShapelessOreRecipe(new ItemStack(Item.getByNameOrId("justanothersnad:snad"), 9), new Object[] { new ItemStack(ModBlocks.compressedSnad)});
+			CraftingRegistry.addShapelessOreRecipe(new ItemStack(Item.getByNameOrId("justanothersnad:snad"), 9, 1), new Object[] { new ItemStack(ModBlocks.compressedRedSnad)});
 		}
 	}
 	
