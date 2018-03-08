@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import com.bartz24.skyresources.RandomHelper;
-import com.bartz24.skyresources.config.ConfigOptions;
 import com.google.common.base.Strings;
 
 import hqbanana.SkyCompression.AdditionalProcessRecipesManager;
@@ -204,12 +203,13 @@ public class ModCrafting {
 			String oreName = Strings.isNullOrEmpty(com.bartz24.skyresources.registry.ModItems.gemList.get(i).oreOverride)
                     ? ("gem" + RandomHelper.capatilizeString(com.bartz24.skyresources.registry.ModItems.gemList.get(i).name))
                     : com.bartz24.skyresources.registry.ModItems.gemList.get(i).oreOverride;
-			if (ConfigOptions.miscSettings.allowAllGemTypes || OreDictionary
-					.getOres(oreName).size() > 0)
+			if (com.bartz24.skyresources.config.ConfigOptions.miscSettings.allowAllGemTypes || OreDictionary.getOres(oreName).size() > 0)
+			{
 				AdditionalProcessRecipesManager.compressedRockGrinderRecipes.addRecipe(new ItemStack(com.bartz24.skyresources.registry.ModItems.dirtyGem, 1, i),
 						com.bartz24.skyresources.registry.ModItems.gemList.get(i).rarity * COMPRESSION_MULTIPLIER, block);
 				AdditionalProcessRecipesManager.compressedRockGrinderRecipes.addRecipe(new ItemStack(com.bartz24.skyresources.registry.ModItems.dirtyGem, 1, i),
 						com.bartz24.skyresources.registry.ModItems.gemList.get(i).rarity, com.bartz24.skyresources.registry.ModItems.gemList.get(i).parentBlock);
+			}
 		}
 		//
 	}
