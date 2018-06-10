@@ -28,7 +28,7 @@ public class MTCompressedWaterExtractorInsertRecipe extends MTRecipeBase
 	}
 
 	@ZenMethod
-	public static void removeRecipe(IIngredient output)
+	public static void removeRecipe(IItemStack output)
 	{
 		removeRecipe(new ProcessRecipe(Arrays.asList(AdditionalCraftTweakerPlugin.toObject(output)), Collections.emptyList(), 0,
 				"compressedWaterExtractor-insert"), AdditionalProcessRecipesManager.compressedWaterExtractorInsertionRecipes);

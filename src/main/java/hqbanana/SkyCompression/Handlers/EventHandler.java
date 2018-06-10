@@ -1,7 +1,6 @@
 package hqbanana.SkyCompression.Handlers;
 
 import hqbanana.SkyCompression.init.ModBlocks;
-import hqbanana.SkyCompression.init.ModItems;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;

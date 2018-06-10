@@ -21,8 +21,8 @@ public class TileCompressedRockCrusher extends TileGenericPower implements ITick
 	//TODO: ADD MORE SLOTS TO OUTPUT
 	
 	public TileCompressedRockCrusher() {
-		super("compressedRockCrusher", 1000000, 6000, 0, 4, new Integer[] { 1, 2, 3 }, new Integer[] { 0 });
-		this.setInventory(new ItemHandlerSpecial(4, new Integer[] { 1, 2, 3 }, new Integer[] { 0 }) {
+		super("compressedRockCrusher", 1000000, 6000, 0, 4, new int[] { 1, 2, 3 }, new int[] { 0 });
+		this.setInventory(new ItemHandlerSpecial(4, new int[] { 1, 2, 3 }, new int[] { 0 }) {
 			protected void onContentsChanged(int slot) {
 				super.onContentsChanged(slot);
 				TileCompressedRockCrusher.this.markDirty();
