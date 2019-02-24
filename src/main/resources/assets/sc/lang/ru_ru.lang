@@ -1,0 +1,55 @@
+//Translated by Yaroslavik
+item.sc.compressedwaterextractor.name=Сжатый экстрактор воды
+item.sc.compressedrockgrinder.name=Сжатый дробильный молот
+item.sc.compressedirongrinder.name=Сжатый железный дробильный молот
+item.sc.compresseddiamondgrinder.name=Сжатый алмазный дробильный молот
+item.sc.compressedcactusknife.name=Сжатый кактусовый нож
+item.sc.compressedstoneknife.name=Сжатый каменный нож
+item.sc.compressedironknife.name=Сжатый железный нож
+item.sc.compresseddiamondknife.name=Сжатый алмазный нож
+item.sc.compressedstick.name=Сжатая палка
+
+tile.sc.compressedstone.name=Сжатый камень
+tile.sc.compressedcobblestone.name=Сжатый булыжник
+tile.sc.compressedgravel.name=Сжатый гравий
+tile.sc.compressednetherrack.name=Сжатый адский камень
+tile.sc.compressedendstone.name=Сжатый эндерняк
+tile.sc.compresseddrycactus.name=Сжатый обезвоженный кактус
+tile.sc.compressedcactus.name=Сжатый кактус
+tile.sc.compresseddirt.name=Сжатая земля
+tile.sc.compressedclay.name=Сжатая глина
+tile.sc.compressedsand.name=Сжатый песок
+tile.sc.compressedredsand.name=Сжатый красный песок
+tile.sc.compressedrockcrusher.name=Сжатый камнедробитель
+tile.sc.compressedlogacacia.name=Сжатая древесина акации
+tile.sc.compressedlogbigoak.name=Сжатая древесина темного дуба
+tile.sc.compressedlogbirch.name=Сжатая древесина березы
+tile.sc.compressedlogjungle.name=Сжатая древесина тропического дерева
+tile.sc.compressedlogoak.name=Сжатая древесина дуба
+tile.sc.compressedlogspruce.name=Сжатая древесина ели
+tile.sc.compressedpetrifiedwood.name=Сжатая древесина окаменелого дерева
+
+tile.sc.compressedsnad.name=Сжатый песок
+tile.sc.compressedredsnad.name=Сжатый красный песок
+
+container.sc.compressedRockCrusher=Сжатый камнедробитель
+
+jei.sc.recipe.compressedRockGrinder=Сжатый дробильный молот
+jei.sc.recipe.compressedWaterExtractor=Сжатый экстрактор воды
+jei.sc.recipe.compressedKnife=Сжатый нож
+
+itemGroup.skycompressiontab=Sky Compression
+
+guide.skyresources.compression=Компрессия
+
+guide.skyresources.compression.compression.title=Компрессия - Сжатие всех вещей!
+guide.skyresources.compression.compression.text=Вы можете сжать свои блоки, такие как камень, в более компактные блоки <recipe,,sc:compressedstone:0> . \n \n Эти блоки дают больше неочищенных драгоценных камней и пыли, чем их обычные варианты, но их можно добывать только с помощью <recipe,,sc:compressedrockgrinder:0> .
+
+guide.skyresources.compression.compressedwaterextracting.title=Сжатие - извлечение воды
+guide.skyresources.compression.compressedwaterextracting.text=С помощью <recipe,,sc:compressedwaterextractor:0> вы можете извлекать воду из 27 блоков одновременно (исключая блоки источника воды)!  Это устройство будет извлекать в радиусе 3x3x3 вокруг блока на который вы смотрите. \n \n Обратите внимание, что это устройство будет извлекать только из одного источника одновременно. Извлечение из кактуса и листьев одновременно не получится. \n \n Вы также можете использовать его для инъекции <recipe,,sc:compresseddirt:0> 1800mB воды, чтобы превратить его в <recipe,,sc:compressedclay:0> .
+
+guide.skyresources.compression.compressedCactus.title=Сжатие - иглы кактуса
+guide.skyresources.compression.compressedCactus.text=Shift+ПКМ по <recipe,,sc:compressedcactus:0> даст вам 9 <recipe,,skyresources:alchemyitemcomponent:0> . Это также нанесет вам серьезный урон, поэтому будьте осторожны с этим мощным растением.
+
+guide.skyresources.compression.compressedAutomation.title=Сжатие - Автоматизация
+guide.skyresources.compression.compressedAutomation.text=Как и обычные блоки, сжатые блоки могут автоматически измельчать и очищать. Это будет сделано с помощью <recipe,,sc:compressedrockcrusher:0> и | WIP устройство для очистки сжатых камней |. Эти машины работают так же, как и их обычные аналоги, но потребляют больше энергии и работают немного быстрее.
