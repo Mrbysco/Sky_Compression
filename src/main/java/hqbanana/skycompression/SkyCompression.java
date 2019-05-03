@@ -31,21 +31,22 @@ public class SkyCompression {
 	public static void PreInit(FMLPreInitializationEvent event) {
 		if(Loader.isModLoaded("justanothersnad"))logger.info("Loading With Just Another Snad support");
 
+		logger.info("Registering Config");
 		MinecraftForge.EVENT_BUS.register(new AdditionalConfigOptions());
 		
-		logger.debug("Pre init");
+//		logger.debug("Pre init");
 		proxy.PreInit(event);
 	}
 	
 	@EventHandler
 	public static void Init(FMLInitializationEvent event) {
-		logger.debug("init");
+//		logger.debug("init");
 		proxy.Init(event);
 	}
 	
 	@EventHandler
 	public static void PostInit(FMLPostInitializationEvent event) {
-		logger.debug("Post init");
+//		logger.debug("Post init");
 		proxy.PostInit(event);
 	}
 }
