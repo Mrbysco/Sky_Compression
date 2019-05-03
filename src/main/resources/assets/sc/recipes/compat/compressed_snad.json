@@ -1,0 +1,22 @@
+{
+  "result": {
+    "item": "sc:compressedsnad"
+  },
+  "pattern": [
+    "S S",
+    " B ",
+    "S S"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:bone_block"
+    },
+    "S": {
+      "item": "#COMPRESSED1XSAND"
+    }
+  },
+  "conditions": [{
+	"type": "sc:justanothersnad"
+  }]
+}

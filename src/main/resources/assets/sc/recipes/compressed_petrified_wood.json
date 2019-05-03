@@ -1,0 +1,16 @@
+{
+  "result": {
+    "item": "sc:compressedpetrifiedwood"
+  },
+  "pattern": [
+    "WWW",
+    "WWW",
+    "WWW"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "W": {
+      "item": "skyresources:petrifiedwood"
+    }
+  }
+}

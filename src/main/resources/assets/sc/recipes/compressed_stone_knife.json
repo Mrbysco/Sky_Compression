@@ -1,0 +1,16 @@
+{
+  "result": {
+    "item": "sc:compressedstoneknife"
+  },
+  "pattern": [
+    "@@@",
+    "@@@",
+    "@@@"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "@": {
+      "item": "skyresources:stonecuttingknife"
+    }
+  }
+}

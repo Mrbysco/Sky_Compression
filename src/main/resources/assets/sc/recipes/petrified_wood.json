@@ -1,0 +1,12 @@
+{
+  "result": {
+    "item": "skyresources:petrifiedwood",
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "sc:compressedpetrifiedwood"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

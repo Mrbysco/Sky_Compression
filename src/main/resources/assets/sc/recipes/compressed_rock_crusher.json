@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "sc:compressedrockcrusher"
+  },
+  "pattern": [
+    "RRR",
+    "RDR",
+    "RRR"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "R": {
+      "item": "skyresources:rockcrusher"
+    },
+    "D": {
+      "item": "skyresources:lightmatterblock"
+    }
+  }
+}

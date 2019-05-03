@@ -1,0 +1,16 @@
+{
+  "result": {
+    "item": "sc:compressedendstone"
+  },
+  "pattern": [
+    "EEE",
+    "EEE",
+    "EEE"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "E": {
+      "item": "minecraft:end_stone"
+    }
+  }
+}

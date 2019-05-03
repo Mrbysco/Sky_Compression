@@ -1,0 +1,16 @@
+{
+  "result": {
+    "item": "sc:compressedironknife"
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "skyresources:ironcuttingknife"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "result": {
+    "item": "minecraft:cactus",
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "sc:compressedcactus"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

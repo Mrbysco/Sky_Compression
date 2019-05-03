@@ -1,0 +1,13 @@
+{
+  "result": {
+    "item": "minecraft:log",
+    "data": 0,
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "sc:compressedlogoak"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

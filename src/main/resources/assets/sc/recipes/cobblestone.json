@@ -1,0 +1,12 @@
+{
+  "result": {
+    "item": "minecraft:cobblestone",
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "sc:compressedcobblestone"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

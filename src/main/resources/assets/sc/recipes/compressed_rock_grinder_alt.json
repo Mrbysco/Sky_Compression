@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "sc:compressedrockgrinder"
+  },
+  "pattern": [
+    "O  ",
+    " O ",
+    "  S"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "S": {
+      "item": "sc:compressedstick"
+    },
+    "O": {
+      "item": "#COMPRESSED1XCOBBLESTONE"
+    }
+  }
+}

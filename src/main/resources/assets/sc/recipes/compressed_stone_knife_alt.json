@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "sc:compressedstoneknife"
+  },
+  "pattern": [
+    "O  ",
+    "OS ",
+    " OS"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "S": {
+      "item": "sc:compressedstick"
+    },
+    "O": {
+      "item": "#COMPRESSED1XCOBBLESTONE"
+    }
+  }
+}

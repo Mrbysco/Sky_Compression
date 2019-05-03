@@ -1,0 +1,16 @@
+{
+  "result": {
+    "item": "sc:compressedstick"
+  },
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "#stickWood"
+    }
+  }
+}

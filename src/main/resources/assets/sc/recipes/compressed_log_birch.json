@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "sc:compressedlogbirch"
+  },
+  "pattern": [
+    "OOO",
+    "OOO",
+    "OOO"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "O": {
+      "item": "minecraft:log",
+      "data": 2
+    }
+  }
+}

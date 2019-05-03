@@ -1,0 +1,16 @@
+{
+  "result": {
+    "item": "sc:compressedgravel"
+  },
+  "pattern": [
+    "GGG",
+    "GGG",
+    "GGG"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "G": {
+      "item": "minecraft:gravel"
+    }
+  }
+}

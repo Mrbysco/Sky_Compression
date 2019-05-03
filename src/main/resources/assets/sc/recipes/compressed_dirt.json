@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "sc:compresseddirt"
+  },
+  "pattern": [
+    "DDD",
+    "DDD",
+    "DDD"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "D": {
+      "item": "minecraft:dirt",
+      "data": 0
+    }
+  }
+}

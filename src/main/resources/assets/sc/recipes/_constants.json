@@ -1,0 +1,58 @@
+[
+	{
+		"name": "COMPRESSED1XCOBBLESTONE",
+		"ingredient": {
+			  "type": "forge:ore_dict",
+			  "ore": "compressed1xCobblestone"
+		}
+	},
+	{
+		"name": "COMPRESSED1XGRAVEL",
+		"ingredient": {
+			  "type": "forge:ore_dict",
+			  "ore": "compressed1xGravel"
+		}
+	},
+	{
+		"name": "COMPRESSED1XNETHERRACK",
+		"ingredient": {
+			  "type": "forge:ore_dict",
+			  "ore": "compressed1xNetherrack"
+		}
+	},
+	{
+		"name": "COMPRESSED1XDIRT",
+		"ingredient": {
+			  "type": "forge:ore_dict",
+			  "ore": "compressed1xDirt"
+		}
+	},
+	{
+		"name": "COMPRESSED1XSAND",
+		"ingredient": {
+			  "type": "forge:ore_dict",
+			  "ore": "compressed1xSand"
+		}
+	},
+	{
+		"name": "blockDiamond",
+		"ingredient": {
+			  "type": "forge:ore_dict",
+			  "ore": "blockDiamond"
+		}
+	},
+	{
+		"name": "blockIron",
+		"ingredient": {
+			  "type": "forge:ore_dict",
+			  "ore": "blockIron"
+		}
+	},
+	{
+		"name": "stickWood",
+		"ingredient": {
+			  "type": "forge:ore_dict",
+			  "ore": "stickWood"
+		}
+	}
+]

@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "sc:compressedredsnad"
+  },
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "justanothersnad:snad",
+      "data": 1
+    }
+  },
+  "conditions": [{
+	"type": "sc:justanothersnad"
+  }]
+}

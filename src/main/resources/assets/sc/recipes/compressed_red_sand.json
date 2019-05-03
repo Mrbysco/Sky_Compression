@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "sc:compressedredsand"
+  },
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:sand",
+      "data": 1
+    }
+  }
+}

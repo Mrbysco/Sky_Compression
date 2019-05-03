@@ -1,0 +1,12 @@
+{
+  "result": {
+    "item": "skyresources:drycactus",
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "sc:compresseddrycactus"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

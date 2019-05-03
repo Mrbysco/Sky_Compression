@@ -1,0 +1,13 @@
+{
+  "result": {
+    "item": "minecraft:sand",
+    "data": 0,
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "sc:compressedsand"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

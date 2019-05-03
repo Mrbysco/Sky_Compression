@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "sc:compressedlogbigoak"
+  },
+  "pattern": [
+    "OOO",
+    "OOO",
+    "OOO"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "O": {
+      "item": "minecraft:log2",
+      "data": 1
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "result": {
+    "item": "sc:compresseddrycactus"
+  },
+  "pattern": [
+    "DDD",
+    "DDD",
+    "DDD"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "D": {
+      "item": "skyresources:drycactus"
+    }
+  }
+}

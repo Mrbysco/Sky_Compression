@@ -1,0 +1,13 @@
+{
+  "result": {
+    "item": "minecraft:stone",
+    "data": 0,
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "sc:compressedstone"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

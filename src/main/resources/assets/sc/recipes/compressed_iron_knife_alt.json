@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "sc:compressedironknife"
+  },
+  "pattern": [
+    "O  ",
+    "OS ",
+    " OS"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "sc:compressedstick"
+    },
+    "O": {
+      "item": "#blockIron"
+    }
+  }
+}

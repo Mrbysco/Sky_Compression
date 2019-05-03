@@ -1,0 +1,16 @@
+{
+  "result": {
+    "item": "sc:compressedirongrinder"
+  },
+  "pattern": [
+    "@@@",
+    "@@@",
+    "@@@"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "@": {
+      "item": "skyresources:irongrinder"
+    }
+  }
+}

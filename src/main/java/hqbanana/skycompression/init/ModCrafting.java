@@ -12,7 +12,6 @@ import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.oredict.OreDictionary;
-import scala.Console;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,8 +20,8 @@ public class ModCrafting {
 	private static final int COMPRESSION_MULTIPLIER = 7;
 	
 	public static void Register() {
-		AddShapedOreRecipes();
-		AddShapelessOreRecipes();
+//		AddShapedOreRecipes();
+//		AddShapelessOreRecipes();
 		AddAdditionalProcessRecipes();
 	}
 	
@@ -55,7 +54,7 @@ public class ModCrafting {
 						'#', new ItemStack(com.bartz24.skyresources.registry.ModItems.diamondGrinder)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedRockCrusher), new Object[] { "RRR", "RDR", "RRR", 'R', new ItemStack(com.bartz24.skyresources.registry.ModBlocks.rockCrusher),
 						'D', new ItemStack(com.bartz24.skyresources.registry.ModBlocks.lightMatterBlock) });
-		
+
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedCactusKnife), new Object[] { "!!!", "!!!", "!!!",
 					'!', new ItemStack(com.bartz24.skyresources.registry.ModItems.cactusKnife)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedStoneKnife), new Object[] { "@@@", "@@@", "@@@",
@@ -64,7 +63,7 @@ public class ModCrafting {
 					'#', new ItemStack(com.bartz24.skyresources.registry.ModItems.ironKnife)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedDiamondKnife), new Object[] { "###", "###", "###",
 				'#', new ItemStack(com.bartz24.skyresources.registry.ModItems.diamondKnife)});
-		
+
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedStoneRockGrinder), new Object[] { "O  ", " O ", "  S", 'O', "compressed1xCobblestone" ,'S', new ItemStack(ModItems.compressedStick)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedIronRockGrinder), new Object[] { "O  ", " O ", "  S", 'O', new ItemStack(Blocks.IRON_BLOCK) ,'S', new ItemStack(ModItems.compressedStick)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedDiamondRockGrinder), new Object[] { "O  ", " O ", "  S", 'O', new ItemStack(Blocks.DIAMOND_BLOCK) ,'S', new ItemStack(ModItems.compressedStick)});
@@ -72,13 +71,13 @@ public class ModCrafting {
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedStoneKnife), new Object[] { "O  ", "OS ", " OS", 'O', "compressed1xCobblestone" ,'S', new ItemStack(ModItems.compressedStick)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedIronKnife), new Object[] { "O  ", "OS ", " OS", 'O', new ItemStack(Blocks.IRON_BLOCK) ,'S', new ItemStack(ModItems.compressedStick)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedDiamondKnife), new Object[] { "O  ", "OS ", " OS", 'O', new ItemStack(Blocks.DIAMOND_BLOCK) ,'S', new ItemStack(ModItems.compressedStick)});
-		
+
 		if (Loader.isModLoaded("justanothersnad"))
 		{
-			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedSnad), new Object[] { "S S", " B ", "S S", 'S', "compressed1xSand", 'B', new ItemStack(Blocks.BONE_BLOCK) });			
-			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedSnad), new Object[] { "SSS", "SSS", "SSS", 'S', new ItemStack(Item.getByNameOrId("justanothersnad:snad")) });			
-			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedRedSnad), new Object[] { "S S", " B ", "S S", 'S', new ItemStack(ModBlocks.compressedRedSand), 'B', new ItemStack(Blocks.BONE_BLOCK) });			
-			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedRedSnad), new Object[] { "SSS", "SSS", "SSS", 'S', new ItemStack(Item.getByNameOrId("justanothersnad:snad"), 1, 1) });			
+			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedSnad), new Object[] { "S S", " B ", "S S", 'S', "compressed1xSand", 'B', new ItemStack(Blocks.BONE_BLOCK) });
+			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedSnad), new Object[] { "SSS", "SSS", "SSS", 'S', new ItemStack(Item.getByNameOrId("justanothersnad:snad")) });
+			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedRedSnad), new Object[] { "S S", " B ", "S S", 'S', new ItemStack(ModBlocks.compressedRedSand), 'B', new ItemStack(Blocks.BONE_BLOCK) });
+			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedRedSnad), new Object[] { "SSS", "SSS", "SSS", 'S', new ItemStack(Item.getByNameOrId("justanothersnad:snad"), 1, 1) });
 		}
 	}
 	
@@ -228,7 +227,7 @@ public class ModCrafting {
 		else if(parentBlock.isItemEqual(new ItemStack(Blocks.GRAVEL))) block = "compressed1xGravel";
 		else if(parentBlock.isItemEqual(new ItemStack(Blocks.NETHERRACK))) block = "compressed1xNetherrack";
 		else if(parentBlock.isItemEqual(new ItemStack(Blocks.END_STONE))) block = new ItemStack(ModBlocks.compressedEndStone);
-		else Console.out().println("Invalid item input: " + parentBlock.getItem().getRegistryName());
+		else SkyCompression.logger.error("Invalid item input: " + parentBlock.getItem().getRegistryName());
 		return block;
     }
 }

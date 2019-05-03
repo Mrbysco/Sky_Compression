@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "sc:compresseddiamondgrinder"
+  },
+  "pattern": [
+    "O  ",
+    " O ",
+    "  S"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "sc:compressedstick"
+    },
+    "O": {
+      "item": "#blockDiamond"
+    }
+  }
+}

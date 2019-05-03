@@ -1,0 +1,22 @@
+{
+  "result": {
+    "item": "sc:compressedredsnad"
+  },
+  "pattern": [
+    "S S",
+    " B ",
+    "S S"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:bone_block"
+    },
+    "S": {
+      "item": "sc:compressedredsand"
+    }
+  },
+  "conditions": [{
+	"type": "sc:justanothersnad"
+  }]
+}

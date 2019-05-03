@@ -1,0 +1,15 @@
+{
+  "result": {
+    "item": "justanothersnad:snad",
+    "data": 1
+  },
+  "ingredients": [
+    {
+      "item": "sc:compressedredsnad"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "conditions": [{
+	"type": "sc:justanothersnad"
+  }]
+}

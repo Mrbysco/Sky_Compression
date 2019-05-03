@@ -1,0 +1,15 @@
+{
+  "result": {
+    "item": "sc:compressedwaterextractor"
+  },
+  "pattern": [
+    "WWW",
+    " WW"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "W": {
+      "item": "skyresources:waterextractor"
+    }
+  }
+}

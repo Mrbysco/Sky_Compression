@@ -1,0 +1,16 @@
+{
+  "result": {
+    "item": "sc:compressednetherrack"
+  },
+  "pattern": [
+    "NNN",
+    "NNN",
+    "NNN"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "N": {
+      "item": "minecraft:netherrack"
+    }
+  }
+}

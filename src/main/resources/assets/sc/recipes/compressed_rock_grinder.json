@@ -1,0 +1,16 @@
+{
+  "result": {
+    "item": "sc:compressedrockgrinder"
+  },
+  "pattern": [
+    "!!!",
+    "!!!",
+    "!!!"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "!": {
+      "item": "skyresources:stonegrinder"
+    }
+  }
+}

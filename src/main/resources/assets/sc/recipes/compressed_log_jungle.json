@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "sc:compressedlogjungle"
+  },
+  "pattern": [
+    "OOO",
+    "OOO",
+    "OOO"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "O": {
+      "item": "minecraft:log",
+      "data": 3
+    }
+  }
+}

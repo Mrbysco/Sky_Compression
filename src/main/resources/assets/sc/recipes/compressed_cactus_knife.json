@@ -1,0 +1,16 @@
+{
+  "result": {
+    "item": "sc:compressedcactusknife"
+  },
+  "pattern": [
+    "!!!",
+    "!!!",
+    "!!!"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "!": {
+      "item": "skyresources:cactuscuttingknife"
+    }
+  }
+}
