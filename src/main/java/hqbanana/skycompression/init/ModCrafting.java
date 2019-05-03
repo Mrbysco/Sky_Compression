@@ -10,6 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.oredict.OreDictionary;
 import scala.Console;
 
@@ -72,7 +73,7 @@ public class ModCrafting {
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedIronKnife), new Object[] { "O  ", "OS ", " OS", 'O', new ItemStack(Blocks.IRON_BLOCK) ,'S', new ItemStack(ModItems.compressedStick)});
 		CraftingRegistry.addShapedOreRecipe(new ItemStack(ModItems.compressedDiamondKnife), new Object[] { "O  ", "OS ", " OS", 'O', new ItemStack(Blocks.DIAMOND_BLOCK) ,'S', new ItemStack(ModItems.compressedStick)});
 		
-		if (SkyCompression.isSnadInstalled)
+		if (Loader.isModLoaded("justanothersnad"))
 		{
 			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedSnad), new Object[] { "S S", " B ", "S S", 'S', "compressed1xSand", 'B', new ItemStack(Blocks.BONE_BLOCK) });			
 			CraftingRegistry.addShapedOreRecipe(new ItemStack(ModBlocks.compressedSnad), new Object[] { "SSS", "SSS", "SSS", 'S', new ItemStack(Item.getByNameOrId("justanothersnad:snad")) });			
@@ -102,7 +103,7 @@ public class ModCrafting {
 		CraftingRegistry.addShapelessOreRecipe(new ItemStack(Blocks.SAND, 9, 1), new Object[] { new ItemStack(ModBlocks.compressedRedSand)});
 		CraftingRegistry.addShapelessOreRecipe(new ItemStack(Items.STICK, 9), new Object[] { new ItemStack(ModItems.compressedStick)});
 		
-		if (SkyCompression.isSnadInstalled)
+		if (Loader.isModLoaded("justanothersnad"))
 		{
 			CraftingRegistry.addShapelessOreRecipe(new ItemStack(Item.getByNameOrId("justanothersnad:snad"), 9), new Object[] { new ItemStack(ModBlocks.compressedSnad)});
 			CraftingRegistry.addShapelessOreRecipe(new ItemStack(Item.getByNameOrId("justanothersnad:snad"), 9, 1), new Object[] { new ItemStack(ModBlocks.compressedRedSnad)});

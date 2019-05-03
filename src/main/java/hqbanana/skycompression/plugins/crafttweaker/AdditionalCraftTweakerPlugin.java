@@ -18,13 +18,13 @@ public class AdditionalCraftTweakerPlugin implements com.bartz24.skyresources.pl
 	public void preInit()
 	{
 		initRecipes();
-
 	}
 
 	public void init()
 	{
 		
 	}
+
 	public static void initRecipes()
 	{
 		CraftTweakerAPI.registerClass(MTCompressedRockGrinderRecipe.class);

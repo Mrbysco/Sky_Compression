@@ -1,4 +1,4 @@
-package hqbanana.skycompression.jei;
+package hqbanana.skycompression.plugins.jei;
 
 import hqbanana.skycompression.AdditionalProcessRecipesManager;
 import hqbanana.skycompression.ItemHelper;
@@ -18,7 +18,7 @@ public class JEIPlugin implements IModPlugin {
 	public void onRuntimeAvailable(IJeiRuntime arg0) {
 		
 	}
-	
+
 	@Override
 	public void register(IModRegistry registry) {
 		registry.addRecipes(AdditionalProcessRecipesManager.compressedRockGrinderRecipes.getRecipes(), "sc.compressed.rockgrinder");

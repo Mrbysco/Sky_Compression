@@ -12,7 +12,6 @@ import java.util.Collections;
 @ZenClass("mods.sc.compressedknife")
 public class MTCompressedKnifeRecipe extends MTRecipeBase
 {
-
 	@ZenMethod
 	public static void addRecipe(IItemStack output, IItemStack input)
 	{
@@ -21,11 +20,11 @@ public class MTCompressedKnifeRecipe extends MTRecipeBase
 						Arrays.asList(AdditionalCraftTweakerPlugin.toStack(input)), 1, "compressedKnife"),
 				AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes);
 	}
+
 	@ZenMethod
 	public static void removeRecipe(IItemStack output)
 	{
 		removeRecipe(new ProcessRecipe(Arrays.asList(AdditionalCraftTweakerPlugin.toStack(output)), Collections.emptyList(), 0,
 				"compressedKnife"), AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes);
 	}
-
 }

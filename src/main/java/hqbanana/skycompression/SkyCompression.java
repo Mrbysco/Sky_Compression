@@ -27,8 +27,6 @@ public class SkyCompression {
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
 
-	public static boolean isSnadInstalled = false;
-
 	@EventHandler
 	public static void PreInit(FMLPreInitializationEvent event) {
 		if(Loader.isModLoaded("justanothersnad"))logger.info("Loading With Just Another Snad support");

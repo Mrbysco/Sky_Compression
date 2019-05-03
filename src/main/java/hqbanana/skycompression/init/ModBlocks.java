@@ -22,6 +22,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class ModBlocks {
@@ -55,7 +56,7 @@ public class ModBlocks {
 
 		compressedPetrifiedWood = RegisterBlock(new BlockCompressedLog("compressedpetrifiedwood", 1.8f, 4.0f, Material.WOOD, 1));
 		
-		if (SkyCompression.isSnadInstalled)
+		if (Loader.isModLoaded("justanothersnad"))
 		{
 			compressedSnad = RegisterBlock(new BlockCompressedSnad("compressedsnad", 0.5f, 4.0f, Material.ROCK, 1));
 			compressedRedSnad = RegisterBlock(new BlockCompressedSnad("compressedredsnad", 0.5f, 4.0f, Material.ROCK, 1));
@@ -94,7 +95,7 @@ public class ModBlocks {
 		
 		RegisterBlockRenderer(compressedPetrifiedWood);
 		
-		if (SkyCompression.isSnadInstalled)
+		if (Loader.isModLoaded("justanothersnad"))
 		{
 			RegisterBlockRenderer(compressedSnad);
 			RegisterBlockRenderer(compressedRedSnad);
