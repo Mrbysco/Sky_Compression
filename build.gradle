@@ -11,9 +11,9 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "1.2.2.1"
-group = "com.HQBanana.sc" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "Sky Compression"
+version = "1.2.2.3"
+group = "com.hqbanana.skycompression" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "Sky-Compression"
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 compileJava {
@@ -31,10 +31,14 @@ repositories {
 		name "Jared"
 		url "http://maven.blamejared.com/"
 	}
+    maven {
+        name = "CurseForge"
+        url = "https://minecraft.curseforge.com/api/maven/"
+    }
 }
 
 minecraft {
-    version = "1.12.2-14.23.4.2705"
+    version = "1.12.2-14.23.5.2768"
     runDir = "run"
     
     // the mappings can be changed at any time, and must be in the following format.
@@ -42,7 +46,7 @@ minecraft {
     // stable_#            stables are built at the discretion of the MCP team.
     // Use non-default mappings at your own risk. they may not always work.
     // simply re-run your setup task after changing the mappings to update your workspace.
-    mappings = "snapshot_20171217"
+    mappings = "stable_39"
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 }
 
@@ -52,11 +56,10 @@ dependencies {
     // or you may define them like so..
     //compile "some.group:artifact:version:classifier"
     //compile "some.group:artifact:version"
-		compile files("lib/skyresources-2.3.1.jar")
+	//	compile files("lib/skyresources-2.3.1.jar")
+		deobfCompile 'sky-resources:skyresources:release'
 		
-		deobfCompile "mezz.jei:jei_1.12.2:4.8.5.+"
-		deobfCompile "mezz.jei:jei_1.12.2:4.8.5.+:api"
-		runtime "mezz.jei:jei_1.12.2:4.8.5.+"
+		deobfCompile "mezz.jei:jei_1.12.2:4.15.0.+"
 	
     // real examples
     //compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
