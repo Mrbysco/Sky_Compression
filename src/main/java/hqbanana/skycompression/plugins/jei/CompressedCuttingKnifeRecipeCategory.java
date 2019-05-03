@@ -16,27 +16,27 @@ import net.minecraft.util.text.translation.I18n;
 import java.util.List;
 
 public class CompressedCuttingKnifeRecipeCategory implements IRecipeCategory {
-	private static final int slotInputStack = 0;
-	private static final int slotInputGrinder = 1;
-	private static final int slotOutput = 2;
+	private static final int SLOT_INPUT_STACK = 0;
+	private static final int SLOT_INPUT_GRINDER = 1;
+	private static final int SLOT_OUTPUT = 2;
 	
-	private final IDrawable background;
-	
+	private final IDrawable BACKGROUND;
+
 	private final String localizedName = I18n.translateToLocalFormatted("jei.sc.recipe.compressedKnife");
-	
+
 	public CompressedCuttingKnifeRecipeCategory(IGuiHelper guiHelper) {
 		super();
-		background = guiHelper.createDrawable(new ResourceLocation(References.ModID, "textures/gui/jei/infusion.png"), 32, 0, 96, 50);
+		BACKGROUND = guiHelper.createDrawable(new ResourceLocation(References.ModID, "textures/gui/jei/infusion.png"), 32, 0, 96, 50);
 	}
-	
+
 	@Override
 	public void drawExtras(Minecraft minecraft) {
-		
+
 	}
-	
+
 	@Override
 	public IDrawable getBackground() {
-		return background;
+		return BACKGROUND;
 	}
 	
 	@Override
@@ -52,15 +52,15 @@ public class CompressedCuttingKnifeRecipeCategory implements IRecipeCategory {
 	@Override
 	public void setRecipe(IRecipeLayout layout, IRecipeWrapper wrapper, IIngredients ingredients)
 	{
-		layout.getItemStacks().init(slotInputGrinder, true, 0, 1);
-		layout.getItemStacks().init(slotInputStack, true, 21, 29);
-		layout.getItemStacks().init(slotOutput, false, 74, 15);
+		layout.getItemStacks().init(SLOT_INPUT_GRINDER, true, 0, 1);
+		layout.getItemStacks().init(SLOT_INPUT_STACK, true, 21, 29);
+		layout.getItemStacks().init(SLOT_OUTPUT, false, 74, 15);
 
 		List<List<ItemStack>> inputs = ingredients.getInputs(ItemStack.class);
-		layout.getItemStacks().set(slotInputStack, inputs.get(0));
-		layout.getItemStacks().set(slotInputGrinder, ItemHelper.getCompressedKnives());
+		layout.getItemStacks().set(SLOT_INPUT_STACK, inputs.get(0));
+		layout.getItemStacks().set(SLOT_INPUT_GRINDER, ItemHelper.getCompressedKnives());
 		List<List<ItemStack>> outputs = ingredients.getOutputs(ItemStack.class);
-		layout.getItemStacks().set(slotOutput, outputs.get(0));
+		layout.getItemStacks().set(SLOT_OUTPUT, outputs.get(0));
 	}
 	
 	@Override

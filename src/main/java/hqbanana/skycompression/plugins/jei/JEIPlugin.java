@@ -21,10 +21,10 @@ public class JEIPlugin implements IModPlugin {
 
 	@Override
 	public void register(IModRegistry registry) {
-		registry.addRecipes(AdditionalProcessRecipesManager.compressedRockGrinderRecipes.getRecipes(), "sc.compressed.rockgrinder");
-		registry.addRecipes(AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes.getRecipes(), "sc.compressed.cuttingknife");
-		registry.addRecipes(AdditionalProcessRecipesManager.compressedWaterExtractorExtractionRecipes.getRecipes(), "sc.compressed.waterexxtractor.extraction");
-		registry.addRecipes(AdditionalProcessRecipesManager.compressedWaterExtractorInsertionRecipes.getRecipes(), "sc.compressed.waterexxtractor.insertion");
+		registry.addRecipes(AdditionalProcessRecipesManager.compressedRockGrinderRecipes.getRecipes(), com.bartz24.skyresources.References.ModID + ":compressedRockGrinder");
+		registry.addRecipes(AdditionalProcessRecipesManager.compressedCuttingKnifeRecipes.getRecipes(), com.bartz24.skyresources.References.ModID + ":compressedKnife");
+		registry.addRecipes(AdditionalProcessRecipesManager.compressedWaterExtractorExtractionRecipes.getRecipes(), com.bartz24.skyresources.References.ModID + ":compressedWaterExtractor");
+		registry.addRecipes(AdditionalProcessRecipesManager.compressedWaterExtractorInsertionRecipes.getRecipes(), com.bartz24.skyresources.References.ModID + ":compressedWaterExtractor");
 		
 		for (ItemStack i : ItemHelper.GetCompressedRockGrinders()) {
 			registry.addRecipeCatalyst(i, com.bartz24.skyresources.References.ModID + ":compressedRockGrinder");
