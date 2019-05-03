@@ -1,12 +1,11 @@
 package hqbanana.skycompression;
 
-import java.util.List;
-
 import com.bartz24.skyresources.recipe.ProcessRecipe;
 import com.bartz24.skyresources.recipe.ProcessRecipeManager;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
+
+import java.util.List;
 
 public class AdditionalProcessRecipesManager {
 	private static List<ProcessRecipeManager> managers;

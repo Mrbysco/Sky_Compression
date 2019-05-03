@@ -7,6 +7,7 @@ import mezz.jei.api.gui.IDrawable;
 import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.BlankRecipeCategory;
+import mezz.jei.api.recipe.IRecipeCategory;
 import mezz.jei.api.recipe.IRecipeWrapper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.item.ItemStack;
@@ -15,7 +16,7 @@ import net.minecraft.util.text.translation.I18n;
 
 import java.util.List;
 
-public class CompressedRockGrinderRecipeCategory extends BlankRecipeCategory {
+public class CompressedRockGrinderRecipeCategory implements IRecipeCategory {
 	private static final int SLOT_INPUT_STACK = 0;
 	private static final int SLOT_INPUT_GRINDER = 1;
 	private static final int SLOT_OUTPUT = 2;
