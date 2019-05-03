@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class ClientProxy extends CommonProxy {
 	public void PreInit(FMLPreInitializationEvent event) {
 		super.PreInit(event);
-		System.out.println("Pre init client");
+//		System.out.println("Pre init client");
 		RegistryHandler.Client();
 		
 		AdditionalModPlugins.initRenderers();
@@ -17,11 +17,11 @@ public class ClientProxy extends CommonProxy {
 	
 	public void Init(FMLInitializationEvent event) {
 		super.Init(event);
-		System.out.println("init client");
+//		System.out.println("init client");
 	}
 	
 	public void PostInit(FMLPostInitializationEvent event) {
 		super.PostInit(event);
-		System.out.println("Post init client");
+//		System.out.println("Post init client");
 	}
 }

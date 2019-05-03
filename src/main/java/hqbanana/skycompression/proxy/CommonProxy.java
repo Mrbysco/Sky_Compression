@@ -13,25 +13,25 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 public class CommonProxy {
 	public void PreInit(FMLPreInitializationEvent event) {
-		System.out.println("Pre init server");
+//		System.out.println("Pre init server");
 		RegistryHandler.Common();
-		
+		ModCrafting.initOreDict();
+		ModCrafting.Register();
+
 		AdditionalModPlugins.preInit();
 	}
 	
 	public void Init(FMLInitializationEvent event) {
-		System.out.println("init server");
+//		System.out.println("init server");
 		NetworkRegistry.INSTANCE.registerGuiHandler(SkyCompression.instance, new ModGuiHandler());
 		ModTileEntities.init();
-		ModCrafting.initOreDict();
-		
+
 		AdditionalModPlugins.init();
 	}
 	
 	public void PostInit(FMLPostInitializationEvent event) {
-		System.out.println("Post init server");
-		ModCrafting.Register();
-		
+//		System.out.println("Post init server");
+
 		AdditionalModPlugins.postInit();
 	}
 }
