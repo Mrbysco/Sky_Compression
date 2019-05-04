@@ -8,7 +8,6 @@ public class SkyCompressionTab extends CreativeTabs {
 
 	public SkyCompressionTab(String label) {
 		super(label);
-		this.setBackgroundImageName("skycompressiontab.png");
 	}
 
 	public ItemStack createIcon() {
